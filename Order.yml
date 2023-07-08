@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/healthcare
+
+external-client:
+  userClient:
+    baseUrl: http://localhost:8081/user
+  pharmacyClient:
+    baseUrl: http://localhost:8080/pharmacy
