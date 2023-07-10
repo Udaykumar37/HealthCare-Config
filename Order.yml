@@ -1,9 +1,9 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/healthcare
+server:
+  servlet:
+    context-path: /order
 
 external-client:
   userClient:
-    baseUrl: http://localhost:8081/user
+    baseUrl: http://USER/user
   pharmacyClient:
-    baseUrl: http://localhost:8080/pharmacy
+    baseUrl: http://PHARMACY/pharmacy
