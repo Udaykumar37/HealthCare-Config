@@ -1,0 +1,26 @@
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-route
+          uri: lb://USER
+          predicates:
+            - Path=/user/**
+        - id: pharmacy-route
+          uri: lb://PHARMACY
+          predicates:
+            - Path=/pharmacy/**
+        - id: order-route
+          uri: lb://ORDER  # lb refers to load balanced
+          predicates:
+            - Path=/order/**
+
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
