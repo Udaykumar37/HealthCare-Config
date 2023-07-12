@@ -15,6 +15,10 @@ spring:
           uri: lb://ORDER  # lb refers to load balanced
           predicates:
             - Path=/order/**
+        - id: eureka-route
+          uri: lb://localhost:8050
+          predicates:
+            - Path=/eureka/web
 
 
 logging:
