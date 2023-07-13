@@ -9,6 +9,19 @@ external-client:
     baseUrl: http://PHARMACY/pharmacy
 
 
+# TO show circuit breaker health metrics provided by application
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Show all types of endpoints in actuator instead of only health metrics endpoints which are by default
+  endpoint:
+    health:
+      show-details: always # show complete health details of pour application
+
 resilience4j:
   circuitbreaker:
     instances:
