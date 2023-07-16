@@ -12,7 +12,7 @@ spring:
       ddl-auto: none
     show-sql: true
   zipkin:
-    baseUrl: http://localhost:9441
+    baseUrl: http://localhost:9411
   sleuth:
     sampler:
       probability: 1.0
