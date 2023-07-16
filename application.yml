@@ -11,3 +11,8 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
+  zipkin:
+    baseUrl: http://localhost:9441
+  sleuth:
+    sampler:
+      probability: 1.0
